@@ -1,6 +1,6 @@
 import React from 'react'
 import { Card, Grid } from 'semantic-ui-react'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const People = ({ data }) => {
   return (
@@ -23,6 +23,8 @@ const People = ({ data }) => {
                       <p> {people.mass} </p>
                       <strong> Hair Color: </strong>
                       <p> {people.hair_color} </p>
+                      <strong> Home Planet </strong>
+                      <p> {people.homeworld} </p>
                     </Card.Description>
                   </Card.Content>
                 </Card>
