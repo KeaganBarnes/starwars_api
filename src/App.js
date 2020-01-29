@@ -7,7 +7,7 @@ import Person from './components/Person'
 import Planets from './components/Planets'
 import { Container, Dimmer, Loader } from 'semantic-ui-react'
 
-function App() {
+const App = () => {
   const [people, setPeople] = useState([])
   const [planets, setPlanets] = useState([])
   const [loading, setLoading] = useState(true)
@@ -35,7 +35,7 @@ function App() {
   // console.log('planets', planets)
 
   return (
-    <>
+    <div style={background}>
       <Router>
         <Navbar />
         <Container>
@@ -47,12 +47,12 @@ function App() {
 
               <Switch>
                 <Route exact path='/'>
-                  <Home />
+                  <Home data={people} />
                 </Route>
                 <Route exact path='/people'>
                   <People data={people} />
                 </Route>
-                <Route exact path='/people/:id'>
+                <Route exact path='/people/:id/' >
                   <Person data={people.name} />
                 </Route>
                 <Route exact path='/planets'>
@@ -62,8 +62,14 @@ function App() {
             )}
         </Container>
       </Router>
-    </>
+    </div>
   );
 }
+
+const background = {
+  backgroundImage: 'url(https://wallpapercave.com/wp/14wJuLo.png)',
+  height: '100vh',
+  color: 'white'
+  }
 
 export default App;

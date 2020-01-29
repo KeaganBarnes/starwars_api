@@ -1,9 +1,8 @@
-import React, {useEffect} from 'react'
+import React from 'react'
+import axios from 'axios'
 
-const Person = () => {
-
-  let {data} = fetch('https://swapi.co/api/people/?formatjson')
-  
+const Person = ({data}) => {
+    
   const { name, height, mass, hair_color, homeplanet } = {data}
 
   return (

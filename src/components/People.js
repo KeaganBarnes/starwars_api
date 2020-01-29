@@ -23,7 +23,7 @@ const People = ({ data }) => {
                       <p> {people.mass} </p>
                       <strong> Hair Color: </strong>
                       <p> {people.hair_color} </p>
-                      <strong> Home Planet </strong>
+                      <strong> Home Planet: </strong>
                       <p> {people.homeworld} </p>
                     </Card.Description>
                   </Card.Content>
