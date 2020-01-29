@@ -8,7 +8,7 @@ const People = ({ data }) => {
       <h1> People </h1>
       <hr />
       <br />
-      <Grid columns={3}>
+      <Grid columns={5}>
         {data.map((people, i) => {
           return (
             <Grid.Column key={i}>

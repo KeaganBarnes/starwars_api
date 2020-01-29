@@ -31,8 +31,8 @@ function App() {
     fetchPlanets()
   }, [])
 
-  console.log('people', people)
-  console.log('planets', planets)
+  // console.log('people', people)
+  // console.log('planets', planets)
 
   return (
     <>
@@ -53,7 +53,7 @@ function App() {
                   <People data={people} />
                 </Route>
                 <Route exact path='/people/:id'>
-                  <Person data={people} />
+                  <Person data={people.name} />
                 </Route>
                 <Route exact path='/planets'>
                   <Planets data={planets} />
@@ -67,4 +67,3 @@ function App() {
 }
 
 export default App;
-
